@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        const belajarasync = async () =>{
+            const response = await axios.get('https://jsonplaceholder.typicode.com/photos/1');
+            const data = await response.data;
+            console.log('albumId = ' + data.albumId);
+            console.log('id = ' + data.id)
+        }
+
+        belajarasync();
+        </script>
+</body>
+</html>
